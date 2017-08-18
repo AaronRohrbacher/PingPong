@@ -1,4 +1,15 @@
 //Business Logic
+function classReturn(number) {
+  if (number === 42) {
+    var customClass = "guideToGalaxy";
+  } else if (number === 420) {
+    customClass = "green";
+  } else if (number === 1776) {
+    customClass = "freedom";
+  }
+  return customClass;
+}
+
 function numberReturn(number, direction) {
   var numberArr = []
   for (i=1; i <= number; i++) {
@@ -27,10 +38,16 @@ function numberReturn(number, direction) {
 $(document).ready(function() {
   $("form#submitNumber").submit(function(event) {
     event.preventDefault();
+    $(".customClassByAaron").addClass(classReturn(parseInt($("input#number").val())));
     $("#output").empty();
+
     jQuery.each(numberReturn($("input#number").val(), $("input:radio[name=direction]:checked").val()), function(index, arrValue) {
       $("#output").append("<li>"+arrValue+"</li>");
     });
+    var number = $("#number");
+    console.log(number);
+
+
   });
   $("#pingPongClick").click(function(event) {
     $("#walken").slideToggle();

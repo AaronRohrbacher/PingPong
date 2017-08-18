@@ -1,9 +1,28 @@
 #walken {
-  display:none;
+  display: none;
 }
+
 .important {
   color: red;
+  cursor: pointer;
 }
+
 #less {
   display: none;
+}
+.customClassByAaron {
+  
+}
+.freedom{
+  background-image: url(../img/flag.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+.green {
+  background-image: url(../img/green.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
 }
