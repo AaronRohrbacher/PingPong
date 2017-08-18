@@ -26,32 +26,29 @@ function numberReturn(number, direction) {
   }
   if (direction === "reverse") {
     return numberArr.reverse()
-    // numberArr = [];
   } else {
     return numberArr
-    // numberArr = [];
   }
   numberArr = [];
 }
 
 //UI Logic
+//Toggles Christopher Walken's Words of Wisdom
 $(document).ready(function() {
+  $("#pingPongClick").click(function(event) {
+    $(".walken").slideToggle();
+    $("#more").toggle();
+    $("#less").toggle();
+  })
+//Displays the game and right column
   $("form#submitNumber").submit(function(event) {
     event.preventDefault();
     $("#customClass").removeClass()
     $("#customClass").addClass("well "+classReturn(parseInt($("input#number").val())));
+    $("#pingPongPlay").slideDown();
     $("#output").empty();
-    jQuery.each(numberReturn(parseInt($("input#number").val()), $("input:radio[name=direction]:checked").val()), function(index, arrValue) {
+    $.each(numberReturn(parseInt($("input#number").val()), $("input:radio[name=direction]:checked").val()), function(index, arrValue) {
       $("#output").append("<li>"+arrValue+"</li>");
     });
-    var number = $("#number");
-    console.log(number);
-
-
   });
-  $("#pingPongClick").click(function(event) {
-    $("#walken").slideToggle();
-    $("#more").toggle();
-    $("#less").toggle();
-  })
 });

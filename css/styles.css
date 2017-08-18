@@ -1,14 +1,27 @@
-#walken {
+.walken {
+  display: none;
+  text-align: center;
+}
+
+#less {
+  display: none;
+}
+
+#pingPongPlay {
+  display: none;
+}
+
+.well {
+  text-align: center;
+}
+
+.hidden {
   display: none;
 }
 
 .important {
   color: red;
   cursor: pointer;
-}
-
-#less {
-  display: none;
 }
 
 .freedom{

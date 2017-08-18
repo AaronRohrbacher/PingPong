@@ -12,42 +12,60 @@
       <div class="row">
         <div id="customClass" class="well">
           <h1>Welcome to Ping-Pong!</h1>
-          <h2 id="pingPongClick"><em><span class="important"><span id ="more">More </span><span id="less">Less </span>info on Ping Pong</span></em></h2>
+          <h3 id="pingPongClick"><em><span class="important"><span id ="more">More </span><span id="less">Less </span>info on Ping Pong</span></em></h3>
         </div><!--End Well-->
-        <div id="walken">
-          <h1>Ping-Pong!</h1>
-          <img src = "img/chriswalken.gif" alt ="Christopher Walken">
-          <object width="300" height="28" class="hark_player">
-          <param name="movie" value="http://cdn.hark.com/swfs/player_fb.swf?pid=tlnmjzvdff&as=1"/>
-          <param name="allowscriptaccess" value="always"/>
-          <param name="allownetworking" value="all"/>
-          <param name="wmode" value="transparent"/>
-          <embed src="http://cdn.hark.com/swfs/player_fb.swf?pid=tlnmjzvdff&as=1" type="application/x-shockwave-flash" allowscriptaccess="always" allownetworking="all" width="300" height="28" wmode="transparent"></embed>
-          </object><br/>
-          <a href="http://www.hark.com/clips/tlnmjzvdff-ping-pong-dot-dot-dot-or-as-the-chinese-say-ping-pong" style="font-size: 9px; color: #ddd;" title="Listen to  on Hark.com"></a>
-        </div><!--End walken-->
+        <div class="panel panel-info walken">
+          <div class="panel-heading">
+            <h3 class="panel-title">Ping Pong!</h3>
+          </div>
+          <div class="panel-body">
+            <img src = "img/chriswalken.gif" alt ="Christopher Walken">
+            <p><strong>Click "Play" for an audio lesson in the pronunciation of Ping Pong:</strong></p>
+            <!--Embedded object below from another website- thanks in advance for not judging me on their HTML! -->
+            <object width="300" height="28" class="hark_player">
+            <param name="movie" value="http://cdn.hark.com/swfs/player_fb.swf?pid=tlnmjzvdff&as=1"/>
+            <param name="allowscriptaccess" value="always"/>
+            <param name="allownetworking" value="all"/>
+            <param name="wmode" value="transparent"/>
+            <embed src="http://cdn.hark.com/swfs/player_fb.swf?pid=tlnmjzvdff&as=1" type="application/x-shockwave-flash" allowscriptaccess="always" allownetworking="all" width="300" height="28" wmode="transparent">
+            </object><br/>
+            <a href="http://www.hark.com/clips/tlnmjzvdff-ping-pong-dot-dot-dot-or-as-the-chinese-say-ping-pong" style="font-size: 9px; color: #ddd;" title="Listen to  on Hark.com"></a>
+            <!--End embedded object with weird HTML, and thank you again for not holding it against me :)-->
+          </div><!--End Panel-Body-->
+        </div><!--End Panel-->
       </div><!--End Row-->
-      <form id="submitNumber">
-        <div class="form-group">
-          <label for ="number">Welcome! Enter a number:</label>
-          <input id="number" type="text">
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="direction" value="forward" checked>
-            Display lowest to highest
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="direction" value="reverse">
-            Display highest to lowest
-          </label>
-        </div>
-        <button type="submit" class ="btn">Let's Play!</button>
-      </form>
-      <ul id="output">
-      </ul>
-    </container>
+      <div class ="row">
+        <div id="pingPongPlay" class="col-md-4">
+          <h3>Game in play!</h3>
+          <img src="img/pingpong.gif" alt="Cats playing ping pong">
+        </div><!--End Column 4-->
+        <div class ="col-md-8">
+          <form id="submitNumber">
+            <div class="form-group">
+              <p><strong>Welcome! Please enter a number:</strong></p>
+              <input id="number" type="number" class="form-control">
+            </div>
+            <div class="alert alert-info" role="alert">
+              <p><em>Hint: </em>Try the numbers <strong>1776, 420, or 42</strong> for extra fun!</p>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="direction" value="forward" checked>
+                Display lowest to highest
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="direction" value="reverse">
+                Display highest to lowest
+              </label>
+            </div>
+            <button type="submit" class ="btn">Let's Play!</button>
+          </form>
+          <ul id="output">
+          </ul>
+        </div><!--End Column 8-->
+      </div><!--End Row-->
+    </div><!--End Container-->
   </body>
 </html>
