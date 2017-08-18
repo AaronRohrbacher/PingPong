@@ -16,6 +16,7 @@ function numberReturn(number) {
   }
   console.log(numberArr);
   return numberArr
+  numberArr = [];
 }
 
 //UI Logic
