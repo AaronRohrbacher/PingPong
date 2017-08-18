@@ -5,6 +5,9 @@ function numberReturn(number) {
     numberArr.push(i);
   }
   for (i = 0; i <= numberArr.length; i++) {
+    if (numberArr[i] % 15 === 0) {
+      numberArr[i] = "ping-pong";
+    }
     if (numberArr[i] % 5 === 0) {
       numberArr[i] = "pong";
     } else if (numberArr[i] % 3 === 0) {
