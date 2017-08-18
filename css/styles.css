@@ -10,9 +10,7 @@
 #less {
   display: none;
 }
-.customClassByAaron {
-  
-}
+
 .freedom{
   background-image: url(../img/flag.jpg);
   background-repeat: no-repeat;
@@ -25,4 +23,11 @@
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
+}
+
+.guideToGalaxy {
+  background-image: url(../img/42.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  color: black;
 }

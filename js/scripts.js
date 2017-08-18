@@ -38,10 +38,10 @@ function numberReturn(number, direction) {
 $(document).ready(function() {
   $("form#submitNumber").submit(function(event) {
     event.preventDefault();
-    $(".customClassByAaron").addClass(classReturn(parseInt($("input#number").val())));
+    $("#customClass").removeClass()
+    $("#customClass").addClass("well "+classReturn(parseInt($("input#number").val())));
     $("#output").empty();
-
-    jQuery.each(numberReturn($("input#number").val(), $("input:radio[name=direction]:checked").val()), function(index, arrValue) {
+    jQuery.each(numberReturn(parseInt($("input#number").val()), $("input:radio[name=direction]:checked").val()), function(index, arrValue) {
       $("#output").append("<li>"+arrValue+"</li>");
     });
     var number = $("#number");
