@@ -1,14 +1,14 @@
-.walken {
-  display: none;
-  text-align: center;
-}
-
 #less {
   display: none;
 }
 
 #pingPongPlay {
   display: none;
+}
+
+.walken {
+  display: none;
+  text-align: center;
 }
 
 .well {

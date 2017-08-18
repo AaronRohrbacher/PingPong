@@ -1,4 +1,6 @@
 //Business Logic
+
+//Decides a custom class to use based on user input
 function classReturn(number) {
   if (number === 42) {
     var customClass = "guideToGalaxy";
@@ -10,6 +12,7 @@ function classReturn(number) {
   return customClass;
 }
 
+//Loops each number, decides "ping, pong, or ping-pong"
 function numberReturn(number, direction) {
   var numberArr = []
   for (i=1; i <= number; i++) {
@@ -40,7 +43,7 @@ $(document).ready(function() {
     $("#more").toggle();
     $("#less").toggle();
   })
-//Displays the game and right column
+//Displays the game
   $("form#submitNumber").submit(function(event) {
     event.preventDefault();
     $("#customClass").removeClass()
