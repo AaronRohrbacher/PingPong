@@ -4,6 +4,11 @@ function numberReturn(number) {
   for (i=1; i <= number; i++) {
     numberArr.push(i);
   }
+  for (i = 0; i <= numberArr.length; i++) {
+    if (numberArr[i] % 3 === 0) {
+      numberArr[i] = "ping";
+    }
+  }
   console.log(numberArr);
   return numberArr
 }
