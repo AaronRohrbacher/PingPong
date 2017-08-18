@@ -1,6 +1,6 @@
 //Business Logic
-function numberReturn(number) {
-  numberArr = []
+function numberReturn(number, direction) {
+  var numberArr = []
   for (i=1; i <= number; i++) {
     numberArr.push(i);
   }
@@ -13,7 +13,13 @@ function numberReturn(number) {
       numberArr[i] = "ping";
     }
   }
-  return numberArr
+  if (direction === "reverse") {
+    return numberArr.reverse()
+    // numberArr = [];
+  } else {
+    return numberArr
+    // numberArr = [];
+  }
   numberArr = [];
 }
 
@@ -21,11 +27,14 @@ function numberReturn(number) {
 $(document).ready(function() {
   $("form#submitNumber").submit(function(event) {
     event.preventDefault();
-    jQuery.each(numberReturn($("input#number").val()), function(index, arrValue) {
+    $("#output").empty();
+    jQuery.each(numberReturn($("input#number").val(), $("input:radio[name=direction]:checked").val()), function(index, arrValue) {
       $("#output").append("<li>"+arrValue+"</li>");
     });
   });
   $("#pingPongClick").click(function(event) {
     $("#walken").slideToggle();
+    $("#more").toggle();
+    $("#less").toggle();
   })
 });
