@@ -1,4 +1,4 @@
-# _Epicodus TrackTracker!_
+# _Ping Pong!_
 ## [View on Github Pages](https://aaronrohrbacher.github.io/PingPong/)
 
 #### _This very exciting game lists numbers in order (or reverse order), replacing numbers divisible by 3 with "Ping," numbers divisible by 5 with "Pong," and numbers divisible by 15 with "Ping-Pong!" Hours of fun!._
