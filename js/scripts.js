@@ -7,14 +7,12 @@ function numberReturn(number) {
   for (i = 0; i <= numberArr.length; i++) {
     if (numberArr[i] % 15 === 0) {
       numberArr[i] = "ping-pong";
-    }
-    if (numberArr[i] % 5 === 0) {
+    } else if (numberArr[i] % 5 === 0) {
       numberArr[i] = "pong";
     } else if (numberArr[i] % 3 === 0) {
       numberArr[i] = "ping";
     }
   }
-  console.log(numberArr);
   return numberArr
   numberArr = [];
 }
@@ -23,8 +21,9 @@ function numberReturn(number) {
 $(document).ready(function() {
   $("form#submitNumber").submit(function(event) {
     event.preventDefault();
-    var input = $("input#number").val();
-
-    $("#output").text(numberReturn(input));
+    // var input = ;
+    jQuery.each(numberReturn($("input#number").val()), function(index, arrValue) {
+      $("#output").append("<li>"+arrValue+"</li>");
+    });
   });
 });
