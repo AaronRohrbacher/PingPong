@@ -1,3 +1,6 @@
-.pingPong img {
+#walken {
   display:none;
+}
+.important {
+  color: red;
 }

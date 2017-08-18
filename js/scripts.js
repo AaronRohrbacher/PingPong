@@ -21,9 +21,11 @@ function numberReturn(number) {
 $(document).ready(function() {
   $("form#submitNumber").submit(function(event) {
     event.preventDefault();
-    // var input = ;
     jQuery.each(numberReturn($("input#number").val()), function(index, arrValue) {
       $("#output").append("<li>"+arrValue+"</li>");
     });
   });
+  $("#pingPongClick").click(function(event) {
+    $("#walken").slideToggle();
+  })
 });
